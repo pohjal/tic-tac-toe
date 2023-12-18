@@ -1,0 +1,75 @@
+* {
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  height: 100vh;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+header {
+  height: 5vh;
+  border-bottom: 1px solid white;
+}
+footer {
+  height: 5vh;
+  border-top: 1px solid white;
+}
+.flex-container {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-container {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-container h1 {
+  text-align: center;
+}
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(3, 150px); /* Creates 3 rows, each 200px high */
+  gap: 10px; /* Adjust the gap between grid items as needed */
+  justify-content: center; /* Center the grid horizontally */
+  align-items: center; /* Center the grid vertically */
+}
+
+.game-item {
+  border: 2px solid white; /* White border for each grid cell */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 150px;
+}
+
+.settings-container {
+  flex: 1;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+.start-button {
+  background-color: red;
+  width: 150px;
+  height: 30px;
+  border: 0;
+  border-radius: 10px;
+}
+.game-item p {
+  font-size: 200px;
+}

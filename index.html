@@ -8,6 +8,39 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <header></header>
+
+    <div class="flex-container">
+      <div class="game-container">
+        <h1>TIC-TAC-TOE</h1>
+        <div class="game-grid">
+          <div class="game-item" id="00"></div>
+          <div class="game-item" id="01"></div>
+          <div class="game-item" id="02"></div>
+          <div class="game-item" id="10"></div>
+          <div class="game-item" id="11"></div>
+          <div class="game-item" id="12"></div>
+          <div class="game-item" id="20"></div>
+          <div class="game-item" id="21"></div>
+          <div class="game-item" id="22"></div>
+        </div>
+      </div>
+      <div class="settings-container">
+        <h1>GameMode</h1>
+        <form>
+          <!-- Game Mode Selection -->
+
+          <label>
+            <input type="radio" name="gameMode" value="1v1" checked />
+            Play 1v1
+          </label>
+
+          <button class="start-button" id="uusipeli">Play a game!</button>
+        </form>
+      </div>
+    </div>
+    <footer></footer>
+
     <script src="scripts.js"></script>
   </body>
 </html>
