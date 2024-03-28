@@ -28,6 +28,20 @@ document.addEventListener("click", function (event) {
 
 var gameInstance = game("leevi", "nikke");
 
+function winnerLog(winner) {
+  console.log("pehva");
+  var winnerInfo = document.querySelector(".winnerNotification");
+  if (winnerInfo) {
+    var value = document.createElement("p");
+    value.textContent = "Winner is " + winner;
+    winnerInfo.innerHTML = ""; // Clear previous content
+    winnerInfo.appendChild(value);
+    console.log("pehva1");
+  } else {
+    console.error("Element with class 'winnerNotification' not found.");
+  }
+}
+
 function game(name1, name2) {
   return {
     voittaja: false,
@@ -123,6 +137,7 @@ function gameGrid() {
         let winner = checkWinner();
         if (winner) {
           console.log(winner + " has won!");
+          winnerLog(winner);
 
           gameInstance.voittaja = true;
         }
